@@ -1,0 +1,1903 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Сварочные работы и металлические конструкции | Шелек</title>
+
+    <meta name="description" content="Сварочные работы, металлические конструкции, ограждения, турники, брусья и изделия из профильной трубы на заказ. Шелек и Енбекшиказахский район.">
+    <meta name="keywords" content="сварщик Шелек, сварочные работы Шелек, сварка металла, металлические конструкции, ограждения, турники, брусья, профильная труба, Енбекшиказахский район">
+
+    <meta property="og:title" content="Сварочные работы и металлические конструкции">
+    <meta property="og:description" content="Изготовление металлических конструкций и сварочные работы на заказ">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #0a0b0d;
+            --bg-soft: #101216;
+            --card: #15171b;
+            --card-hover: #1b1e23;
+            --text: #f5f5f5;
+            --muted: #9a9da3;
+            --line: rgba(255,255,255,.08);
+            --orange: #ff6a00;
+            --orange-light: #ff8a32;
+            --green: #25d366;
+            --max: 1200px;
+            --radius: 20px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: Inter, Arial, sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        button,
+        input,
+        textarea {
+            font: inherit;
+        }
+
+        .container {
+            width: min(var(--max), calc(100% - 40px));
+            margin: auto;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: .3s;
+        }
+
+        header.scrolled {
+            background: rgba(10,11,13,.88);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .nav {
+            height: 82px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 900;
+            letter-spacing: -.5px;
+        }
+
+        .logo-mark {
+            width: 42px;
+            height: 42px;
+            display: grid;
+            place-items: center;
+            background: var(--orange);
+            color: #111;
+            font-size: 20px;
+            font-weight: 900;
+            transform: skew(-8deg);
+            box-shadow: 0 8px 30px rgba(255,106,0,.22);
+        }
+
+        .logo-text span {
+            color: var(--orange);
+        }
+
+        .logo-sub {
+            display: block;
+            color: #777b82;
+            font-size: 9px;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            margin-top: -2px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            color: #c5c7cb;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .nav-links a {
+            transition: .25s;
+        }
+
+        .nav-links a:hover {
+            color: var(--orange-light);
+        }
+
+        .nav-phone {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .phone-icon {
+            width: 34px;
+            height: 34px;
+            display: grid;
+            place-items: center;
+            border: 1px solid var(--line);
+            border-radius: 50%;
+        }
+
+        .burger {
+            display: none;
+            border: 0;
+            background: transparent;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 780px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background:
+                linear-gradient(90deg, rgba(7,8,10,.98) 0%, rgba(7,8,10,.86) 40%, rgba(7,8,10,.40) 100%),
+                url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=2200&q=85") center/cover;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(120deg, rgba(255,106,0,.08), transparent 35%),
+                repeating-linear-gradient(135deg, transparent 0 70px, rgba(255,255,255,.012) 71px 72px);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            right: -250px;
+            top: 120px;
+            background: var(--orange);
+            filter: blur(180px);
+            opacity: .08;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding-top: 90px;
+            max-width: 760px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--orange-light);
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            font-size: 12px;
+            font-weight: 800;
+            margin-bottom: 25px;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 34px;
+            height: 2px;
+            background: var(--orange);
+        }
+
+        h1 {
+            font-family: Oswald, Inter, sans-serif;
+            font-size: clamp(52px, 7vw, 92px);
+            line-height: .96;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            margin-bottom: 28px;
+        }
+
+        h1 span {
+            color: var(--orange);
+        }
+
+        .hero-description {
+            max-width: 610px;
+            color: #c0c3c7;
+            font-size: 18px;
+            margin-bottom: 36px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+        }
+
+        .btn {
+            min-height: 56px;
+            padding: 0 25px;
+            border-radius: 11px;
+            border: 1px solid transparent;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 14px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .btn-primary {
+            background: var(--orange);
+            color: #111;
+            box-shadow: 0 12px 35px rgba(255,106,0,.18);
+        }
+
+        .btn-primary:hover {
+            background: var(--orange-light);
+            transform: translateY(-3px);
+            box-shadow: 0 18px 45px rgba(255,106,0,.28);
+        }
+
+        .btn-outline {
+            border-color: rgba(255,255,255,.18);
+            background: rgba(255,255,255,.04);
+            color: white;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--orange);
+            transform: translateY(-3px);
+        }
+
+        .hero-bottom {
+            position: absolute;
+            bottom: 30px;
+            left: 0;
+            width: 100%;
+            z-index: 3;
+        }
+
+        .hero-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255,255,255,.12);
+            padding-top: 18px;
+            color: #aaaeb5;
+            font-size: 12px;
+        }
+
+        .hero-info strong {
+            color: white;
+        }
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
+
+        section {
+            padding: 105px 0;
+        }
+
+        .section-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 30px;
+            margin-bottom: 48px;
+        }
+
+        .section-label {
+            color: var(--orange);
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            font-family: Oswald, Inter, sans-serif;
+            font-size: clamp(38px, 5vw, 62px);
+            text-transform: uppercase;
+            line-height: 1;
+            letter-spacing: -1px;
+        }
+
+        .section-description {
+            max-width: 470px;
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services {
+            background: var(--bg);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .service-card {
+            position: relative;
+            overflow: hidden;
+            min-height: 245px;
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 28px;
+            transition: .35s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            background: var(--card-hover);
+            border-color: rgba(255,106,0,.35);
+        }
+
+        .service-number {
+            position: absolute;
+            right: 22px;
+            top: 18px;
+            color: rgba(255,255,255,.045);
+            font-size: 70px;
+            font-weight: 900;
+        }
+
+        .service-icon {
+            width: 52px;
+            height: 52px;
+            display: grid;
+            place-items: center;
+            border-radius: 14px;
+            background: rgba(255,106,0,.1);
+            border: 1px solid rgba(255,106,0,.18);
+            color: var(--orange);
+            font-size: 23px;
+            margin-bottom: 28px;
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            margin-bottom: 9px;
+        }
+
+        .service-card p {
+            color: var(--muted);
+            font-size: 13px;
+            max-width: 290px;
+        }
+
+        /* =========================
+           ABOUT / STATS
+        ========================= */
+
+        .about {
+            background: var(--bg-soft);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+            height: 570px;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+        }
+
+        .about-image img {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-badge {
+            position: absolute;
+            bottom: 25px;
+            left: 25px;
+            background: rgba(10,11,13,.9);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,.1);
+            border-radius: 15px;
+            padding: 17px 20px;
+        }
+
+        .image-badge strong {
+            display: block;
+            color: var(--orange);
+            font-size: 23px;
+        }
+
+        .image-badge span {
+            font-size: 11px;
+            color: #bbb;
+        }
+
+        .about-text p {
+            color: var(--muted);
+            margin: 22px 0 32px;
+            font-size: 15px;
+        }
+
+        .check-list {
+            display: grid;
+            gap: 15px;
+        }
+
+        .check-item {
+            display: flex;
+            gap: 13px;
+            align-items: flex-start;
+            color: #d7d8db;
+            font-size: 14px;
+        }
+
+        .check {
+            width: 24px;
+            height: 24px;
+            min-width: 24px;
+            border-radius: 50%;
+            background: rgba(255,106,0,.12);
+            color: var(--orange);
+            display: grid;
+            place-items: center;
+            font-size: 12px;
+        }
+
+        /* =========================
+           GALLERY
+        ========================= */
+
+        .gallery {
+            background: var(--bg);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1.3fr .7fr .7fr;
+            grid-auto-rows: 260px;
+            gap: 14px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 17px;
+            cursor: pointer;
+            border: 1px solid var(--line);
+        }
+
+        .gallery-item:first-child {
+            grid-row: span 2;
+        }
+
+        .gallery-item img {
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+        .gallery-item::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(transparent 40%, rgba(0,0,0,.8));
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.06);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            z-index: 2;
+            bottom: 18px;
+            left: 20px;
+            right: 20px;
+        }
+
+        .gallery-caption strong {
+            font-size: 17px;
+        }
+
+        .gallery-caption span {
+            display: block;
+            color: #bbb;
+            font-size: 11px;
+            margin-top: 2px;
+        }
+
+        /* =========================
+           BENEFITS
+        ========================= */
+
+        .benefits {
+            background: var(--bg-soft);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 16px;
+        }
+
+        .benefit {
+            padding: 28px;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: rgba(255,255,255,.018);
+        }
+
+        .benefit-icon {
+            font-size: 25px;
+            margin-bottom: 18px;
+        }
+
+        .benefit h3 {
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        .benefit p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* =========================
+           PROCESS
+        ========================= */
+
+        .process {
+            background: var(--bg);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 0;
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .step {
+            min-height: 240px;
+            padding: 30px;
+            border-right: 1px solid var(--line);
+            position: relative;
+        }
+
+        .step:last-child {
+            border-right: 0;
+        }
+
+        .step-number {
+            font-family: Oswald;
+            color: var(--orange);
+            font-size: 42px;
+            margin-bottom: 50px;
+        }
+
+        .step h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .step p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            padding: 0 0 105px;
+            background: var(--bg);
+        }
+
+        .cta-box {
+            position: relative;
+            overflow: hidden;
+            padding: 70px;
+            border-radius: 25px;
+            background:
+                linear-gradient(110deg, rgba(255,106,0,.18), rgba(255,106,0,.02)),
+                #17191d;
+            border: 1px solid rgba(255,106,0,.2);
+        }
+
+        .cta-box::after {
+            content: "WELD";
+            position: absolute;
+            right: -20px;
+            bottom: -75px;
+            font-family: Oswald;
+            font-size: 230px;
+            font-weight: 700;
+            color: rgba(255,255,255,.025);
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+        }
+
+        .cta h2 {
+            margin-bottom: 18px;
+        }
+
+        .cta p {
+            color: #aeb1b6;
+            margin-bottom: 28px;
+            max-width: 570px;
+        }
+
+        /* =========================
+           CONTACTS
+        ========================= */
+
+        .contacts {
+            background: var(--bg-soft);
+        }
+
+        .contacts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-list {
+            display: grid;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .contact-card {
+            display: flex;
+            gap: 17px;
+            align-items: center;
+            padding: 19px;
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 15px;
+        }
+
+        .contact-icon {
+            width: 45px;
+            height: 45px;
+            min-width: 45px;
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+            background: rgba(255,106,0,.1);
+            color: var(--orange);
+            font-size: 19px;
+        }
+
+        .contact-card small {
+            display: block;
+            color: #777b82;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 2px;
+        }
+
+        .contact-card strong {
+            font-size: 16px;
+        }
+
+        .contact-card a:hover {
+            color: var(--orange);
+        }
+
+        .contact-box {
+            padding: 35px;
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            background: var(--card);
+        }
+
+        .contact-box h3 {
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        .contact-box > p {
+            color: var(--muted);
+            font-size: 13px;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 13px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            border: 1px solid var(--line);
+            background: #0e1013;
+            color: white;
+            border-radius: 11px;
+            padding: 15px;
+            outline: none;
+            transition: .25s;
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: rgba(255,106,0,.6);
+        }
+
+        .form-submit {
+            width: 100%;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #070809;
+            border-top: 1px solid var(--line);
+            padding: 30px 0;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            color: #73767c;
+            font-size: 11px;
+        }
+
+        .footer-brand {
+            color: #d7d7d7;
+            font-weight: 800;
+        }
+
+        .footer-brand span {
+            color: var(--orange);
+        }
+
+        /* =========================
+           WHATSAPP
+        ========================= */
+
+        .whatsapp-float {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 999;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: var(--green);
+            display: grid;
+            place-items: center;
+            color: white;
+            font-size: 27px;
+            box-shadow: 0 10px 30px rgba(37,211,102,.3);
+            transition: .3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.08) translateY(-3px);
+        }
+
+        .whatsapp-float::before {
+            content: "";
+            position: absolute;
+            inset: -5px;
+            border: 1px solid rgba(37,211,102,.25);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%,100% { transform: scale(1); opacity: .8; }
+            50% { transform: scale(1.18); opacity: 0; }
+        }
+
+        /* =========================
+           LIGHTBOX
+        ========================= */
+
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 3000;
+            display: none;
+            place-items: center;
+            padding: 25px;
+            background: rgba(0,0,0,.92);
+            backdrop-filter: blur(10px);
+        }
+
+        .lightbox.active {
+            display: grid;
+        }
+
+        .lightbox img {
+            max-width: 1000px;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 12px;
+        }
+
+        .lightbox-close {
+            position: fixed;
+            right: 25px;
+            top: 20px;
+            border: 0;
+            background: transparent;
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+        }
+
+        /* =========================
+           REVEAL
+        ========================= */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: .7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .nav-links,
+            .nav-phone {
+                display: none;
+            }
+
+            .burger {
+                display: block;
+            }
+
+            .nav-links.mobile-open {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                top: 72px;
+                left: 20px;
+                right: 20px;
+                padding: 22px;
+                border: 1px solid var(--line);
+                border-radius: 15px;
+                background: rgba(15,16,19,.97);
+                backdrop-filter: blur(15px);
+            }
+
+            .hero {
+                min-height: 720px;
+                background:
+                    linear-gradient(90deg, rgba(7,8,10,.94), rgba(7,8,10,.68)),
+                    url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1500&q=80") center/cover;
+            }
+
+            .services-grid,
+            .benefits-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .about-grid,
+            .contacts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .step:nth-child(2) {
+                border-right: 0;
+            }
+
+            .step:nth-child(-n+2) {
+                border-bottom: 1px solid var(--line);
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .gallery-item:first-child {
+                grid-row: span 1;
+            }
+
+            .cta-box {
+                padding: 50px 35px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: min(100% - 28px, var(--max));
+            }
+
+            .nav {
+                height: 72px;
+            }
+
+            .hero {
+                min-height: 680px;
+            }
+
+            .hero-content {
+                padding-top: 65px;
+            }
+
+            h1 {
+                font-size: 49px;
+                letter-spacing: -1px;
+            }
+
+            .hero-description {
+                font-size: 15px;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .hero-bottom {
+                bottom: 18px;
+            }
+
+            .hero-info {
+                font-size: 10px;
+            }
+
+            .hero-info div:last-child {
+                display: none;
+            }
+
+            section {
+                padding: 75px 0;
+            }
+
+            .section-head {
+                display: block;
+            }
+
+            .section-description {
+                margin-top: 18px;
+            }
+
+            .services-grid,
+            .benefits-grid,
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .step {
+                border-right: 0;
+                border-bottom: 1px solid var(--line);
+                min-height: 190px;
+            }
+
+            .step:last-child {
+                border-bottom: 0;
+            }
+
+            .step:nth-child(2) {
+                border-bottom: 1px solid var(--line);
+            }
+
+            .step-number {
+                margin-bottom: 30px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                grid-auto-rows: 250px;
+            }
+
+            .about-image {
+                height: 390px;
+            }
+
+            .cta {
+                padding-bottom: 75px;
+            }
+
+            .cta-box {
+                padding: 40px 25px;
+            }
+
+            .cta-box::after {
+                font-size: 130px;
+            }
+
+            .contact-box {
+                padding: 25px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .whatsapp-float {
+                width: 54px;
+                height: 54px;
+                right: 15px;
+                bottom: 15px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: .01ms !important;
+                transition-duration: .01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header id="header">
+    <div class="container nav">
+
+        <a href="#home" class="logo">
+            <div class="logo-mark">W</div>
+            <div class="logo-text">
+                METAL<span>WORK</span>
+                <small class="logo-sub">сварочные работы</small>
+            </div>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="#home">Главная</a>
+            <a href="#services">Услуги</a>
+            <a href="#works">Работы</a>
+            <a href="#about">О нас</a>
+            <a href="#process">Как работаем</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+
+        <a class="nav-phone" href="tel:+77776956210">
+            <span class="phone-icon">☎</span>
+            +7 777 695 62 10
+        </a>
+
+        <button class="burger" id="burger">☰</button>
+
+    </div>
+</header>
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="container">
+            <div class="hero-content reveal">
+
+                <div class="eyebrow">
+                    Сварка • Металл • Изготовление
+                </div>
+
+                <h1>
+                    МЕТАЛЛ,<br>
+                    КОТОРЫЙ<br>
+                    <span>РАБОТАЕТ.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Изготавливаем прочные металлические конструкции
+                    и выполняем сварочные работы на заказ.
+                    По вашим размерам, задачам и пожеланиям.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a class="btn btn-primary"
+                       href="https://wa.me/77776956210?text=Здравствуйте!%20Хочу%20узнать%20стоимость%20металлической%20конструкции."
+                       target="_blank">
+                        💬 Написать в WhatsApp
+                    </a>
+
+                    <a class="btn btn-outline" href="tel:+77776956210">
+                        ☎ Позвонить
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="hero-bottom">
+            <div class="container">
+                <div class="hero-info">
+                    <div>
+                        <strong>Шелек</strong> · Енбекшиказахский район
+                    </div>
+
+                    <div>
+                        Изготовление <strong>на заказ</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+
+        <div class="container">
+
+            <div class="section-head reveal">
+                <div>
+                    <div class="section-label">Что мы делаем</div>
+                    <h2>Наши услуги</h2>
+                </div>
+
+                <p class="section-description">
+                    От простой сварки до изготовления полноценных
+                    металлических конструкций по индивидуальным размерам.
+                </p>
+            </div>
+
+            <div class="services-grid">
+
+                <article class="service-card reveal">
+                    <span class="service-number">01</span>
+                    <div class="service-icon">🔥</div>
+                    <h3>Сварочные работы</h3>
+                    <p>Сварка, ремонт и соединение металлических конструкций различной сложности.</p>
+                </article>
+
+                <article class="service-card reveal">
+                    <span class="service-number">02</span>
+                    <div class="service-icon">🏗</div>
+                    <h3>Металлоконструкции</h3>
+                    <p>Изготовление прочных конструкций из металла и профильной трубы.</p>
+                </article>
+
+                <article class="service-card reveal">
+                    <span class="service-number">03</span>
+                    <div class="service-icon">🏋</div>
+                    <h3>Турники и брусья</h3>
+                    <p>Сварные спортивные конструкции для дома, двора и спортивных площадок.</p>
+                </article>
+
+                <article class="service-card reveal">
+                    <span class="service-number">04</span>
+                    <div class="service-icon">🚧</div>
+                    <h3>Ограждения</h3>
+                    <p>Изготовление металлических ограждений различных форм, размеров и дизайна.</p>
+                </article>
+
+                <article class="service-card reveal">
+                    <span class="service-number">05</span>
+                    <div class="service-icon">🪦</div>
+                    <h3>Ритуальные ограды</h3>
+                    <p>Аккуратные металлические ограждения для могил и памятников.</p>
+                </article>
+
+                <article class="service-card reveal">
+                    <span class="service-number">06</span>
+                    <div class="service-icon">⚙</div>
+                    <h3>Изделия на заказ</h3>
+                    <p>Изготовление металлических изделий по вашим размерам и фотографии-примеру.</p>
+                </article>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <div class="container about-grid">
+
+            <div class="about-image reveal">
+
+                <img
+                    src="https://images.unsplash.com/photo-1565051296124-4e3f4e2f0f2a?auto=format&fit=crop&w=1200&q=85"
+                    alt="Металлические конструкции и сварочные работы"
+                    loading="lazy"
+                >
+
+                <div class="image-badge">
+                    <strong>На заказ</strong>
+                    <span>по вашим размерам и пожеланиям</span>
+                </div>
+
+            </div>
+
+            <div class="about-text reveal">
+
+                <div class="section-label">Надёжность в деталях</div>
+
+                <h2>СДЕЛАНО<br>НА СОВЕСТЬ</h2>
+
+                <p>
+                    Каждая конструкция начинается с точного понимания задачи.
+                    Подбираем подходящий материал, учитываем размеры и назначение
+                    изделия и уделяем внимание качеству сварных соединений.
+                </p>
+
+                <div class="check-list">
+
+                    <div class="check-item">
+                        <span class="check">✓</span>
+                        <span>Прочные металлические конструкции</span>
+                    </div>
+
+                    <div class="check-item">
+                        <span class="check">✓</span>
+                        <span>Аккуратные сварные соединения</span>
+                    </div>
+
+                    <div class="check-item">
+                        <span class="check">✓</span>
+                        <span>Изготовление по индивидуальным размерам</span>
+                    </div>
+
+                    <div class="check-item">
+                        <span class="check">✓</span>
+                        <span>Обсуждение заказа напрямую с мастером</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GALLERY -->
+    <section class="gallery" id="works">
+
+        <div class="container">
+
+            <div class="section-head reveal">
+
+                <div>
+                    <div class="section-label">Примеры изделий</div>
+                    <h2>Наши работы</h2>
+                </div>
+
+                <p class="section-description">
+                    Примеры металлических конструкций.
+                    Реальные фотографии готовых работ можно добавить сюда в любой момент.
+                </p>
+
+            </div>
+
+            <div class="gallery-grid">
+
+                <div class="gallery-item reveal">
+                    <img
+                        src="https://images.unsplash.com/photo-1518709414768-a88981a4515d?auto=format&fit=crop&w=1200&q=85"
+                        alt="Сварочные металлические конструкции"
+                        loading="lazy"
+                    >
+                    <div class="gallery-caption">
+                        <strong>Металлические конструкции</strong>
+                        <span>Изготовление на заказ</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal">
+                    <img
+                        src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=85"
+                        alt="Работа с металлом"
+                        loading="lazy"
+                    >
+                    <div class="gallery-caption">
+                        <strong>Сварочные работы</strong>
+                        <span>Прочные соединения</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal">
+                    <img
+                        src="https://images.unsplash.com/photo-1541971875076-8f970d573be6?auto=format&fit=crop&w=900&q=85"
+                        alt="Металлические изделия"
+                        loading="lazy"
+                    >
+                    <div class="gallery-caption">
+                        <strong>Изделия из металла</strong>
+                        <span>Индивидуальные размеры</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal">
+                    <img
+                        src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=900&q=85"
+                        alt="Сварка металла"
+                        loading="lazy"
+                    >
+                    <div class="gallery-caption">
+                        <strong>Работа с металлом</strong>
+                        <span>Аккуратность в деталях</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal">
+                    <img
+                        src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=900&q=85"
+                        alt="Профильная труба"
+                        loading="lazy"
+                    >
+                    <div class="gallery-caption">
+                        <strong>Профильная труба</strong>
+                        <span>Прочные конструкции</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BENEFITS -->
+    <section class="benefits">
+
+        <div class="container">
+
+            <div class="section-head reveal">
+
+                <div>
+                    <div class="section-label">Почему мы</div>
+                    <h2>ПРОСТО.<br>НАДЁЖНО.</h2>
+                </div>
+
+            </div>
+
+            <div class="benefits-grid">
+
+                <div class="benefit reveal">
+                    <div class="benefit-icon">🔥</div>
+                    <h3>Качественная сварка</h3>
+                    <p>Внимание к прочности и аккуратности каждого соединения.</p>
+                </div>
+
+                <div class="benefit reveal">
+                    <div class="benefit-icon">📐</div>
+                    <h3>Точные размеры</h3>
+                    <p>Конструкции изготавливаются с учетом конкретных размеров и задач.</p>
+                </div>
+
+                <div class="benefit reveal">
+                    <div class="benefit-icon">💪</div>
+                    <h3>Прочность</h3>
+                    <p>Главный приоритет — надежность и длительный срок эксплуатации.</p>
+                </div>
+
+                <div class="benefit reveal">
+                    <div class="benefit-icon">🔧</div>
+                    <h3>Индивидуальный заказ</h3>
+                    <p>Можно отправить фото, размеры или просто рассказать, что необходимо.</p>
+                </div>
+
+                <div class="benefit reveal">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Честный расчет</h3>
+                    <p>Стоимость обсуждается заранее в зависимости от материалов и объема работы.</p>
+                </div>
+
+                <div class="benefit reveal">
+                    <div class="benefit-icon">📍</div>
+                    <h3>Работаем рядом</h3>
+                    <p>Село Шелек и Енбекшиказахский район.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROCESS -->
+    <section class="process" id="process">
+
+        <div class="container">
+
+            <div class="section-head reveal">
+
+                <div>
+                    <div class="section-label">От заявки до результата</div>
+                    <h2>КАК МЫ<br>РАБОТАЕМ</h2>
+                </div>
+
+            </div>
+
+            <div class="process-grid">
+
+                <div class="step reveal">
+                    <div class="step-number">01</div>
+                    <h3>Связываетесь с нами</h3>
+                    <p>Позвоните или напишите в WhatsApp.</p>
+                </div>
+
+                <div class="step reveal">
+                    <div class="step-number">02</div>
+                    <h3>Обсуждаем задачу</h3>
+                    <p>Уточняем размеры, материал и пожелания.</p>
+                </div>
+
+                <div class="step reveal">
+                    <div class="step-number">03</div>
+                    <h3>Изготавливаем</h3>
+                    <p>Выполняем сварочные работы и создаем конструкцию.</p>
+                </div>
+
+                <div class="step reveal">
+                    <div class="step-number">04</div>
+                    <h3>Получаете результат</h3>
+                    <p>Готовое изделие соответствует согласованной задаче.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="cta">
+
+        <div class="container">
+
+            <div class="cta-box reveal">
+
+                <div class="cta-content">
+
+                    <div class="section-label">Есть идея?</div>
+
+                    <h2>
+                        СДЕЛАЕМ<br>
+                        ИЗ МЕТАЛЛА.
+                    </h2>
+
+                    <p>
+                        Отправьте фотографию, пример или просто опишите,
+                        что вам необходимо изготовить. Обсудим задачу и
+                        сориентируем по стоимости.
+                    </p>
+
+                    <a
+                        class="btn btn-primary"
+                        href="https://wa.me/77776956210?text=Здравствуйте!%20Хочу%20заказать%20металлическое%20изделие.%20Могу%20отправить%20фото%20и%20размеры."
+                        target="_blank"
+                    >
+                        💬 Обсудить заказ в WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACTS -->
+    <section class="contacts" id="contacts">
+
+        <div class="container contacts-grid">
+
+            <div class="reveal">
+
+                <div class="section-label">Контакты</div>
+
+                <h2>СВЯЖИТЕСЬ<br>С НАМИ</h2>
+
+                <div class="contact-list">
+
+                    <div class="contact-card">
+                        <div class="contact-icon">☎</div>
+                        <div>
+                            <small>Телефон</small>
+                            <a href="tel:+77776956210">
+                                <strong>+7 777 695 62 10</strong>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">💬</div>
+                        <div>
+                            <small>WhatsApp</small>
+                            <a
+                                href="https://wa.me/77776956210"
+                                target="_blank"
+                            >
+                                <strong>Написать сообщение</strong>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <small>Зона работы</small>
+                            <strong>село Шелек и Енбекшиказахский район</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-box reveal">
+
+                <h3>Получить консультацию</h3>
+
+                <p>
+                    Оставьте контактные данные — или напишите напрямую
+                    в WhatsApp для более быстрого ответа.
+                </p>
+
+                <form id="contactForm">
+
+                    <div class="form-group">
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Ваше имя"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="Номер телефона"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <textarea
+                            id="message"
+                            placeholder="Что необходимо изготовить?"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button class="btn btn-primary form-submit" type="submit">
+                        Отправить заявку в WhatsApp
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container footer-inner">
+
+        <div class="footer-brand">
+            METAL<span>WORK</span>
+        </div>
+
+        <div>
+            Сварочные работы · Металлические конструкции
+        </div>
+
+        <div>
+            © <span id="year"></span>
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a
+    class="whatsapp-float"
+    href="https://wa.me/77776956210"
+    target="_blank"
+    aria-label="Написать в WhatsApp"
+>
+    ☎
+</a>
+
+
+<!-- LIGHTBOX -->
+
+<div class="lightbox" id="lightbox">
+
+    <button class="lightbox-close" id="lightboxClose">
+        ×
+    </button>
+
+    <img id="lightboxImage" src="" alt="Увеличенное изображение">
+
+</div>
+
+
+<script>
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    const header = document.getElementById("header");
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 30) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+
+    });
+
+
+    /* =========================
+       MOBILE MENU
+    ========================= */
+
+    const burger = document.getElementById("burger");
+    const navLinks = document.getElementById("navLinks");
+
+    burger.addEventListener("click", () => {
+        navLinks.classList.toggle("mobile-open");
+
+        burger.textContent =
+            navLinks.classList.contains("mobile-open")
+                ? "×"
+                : "☰";
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            navLinks.classList.remove("mobile-open");
+            burger.textContent = "☰";
+
+        });
+
+    });
+
+
+    /* =========================
+       REVEAL ANIMATIONS
+    ========================= */
+
+    const observer = new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+    document.querySelectorAll(".reveal").forEach(element => {
+        observer.observe(element);
+    });
+
+
+    /* =========================
+       GALLERY LIGHTBOX
+    ========================= */
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const lightboxClose = document.getElementById("lightboxClose");
+
+    document.querySelectorAll(".gallery-item img").forEach(image => {
+
+        image.addEventListener("click", () => {
+
+            lightboxImage.src = image.src;
+            lightbox.classList.add("active");
+            document.body.style.overflow = "hidden";
+
+        });
+
+    });
+
+    function closeLightbox() {
+
+        lightbox.classList.remove("active");
+        document.body.style.overflow = "";
+
+    }
+
+    lightboxClose.addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", event => {
+
+        if (event.target === lightbox) {
+            closeLightbox();
+        }
+
+    });
+
+    document.addEventListener("keydown", event => {
+
+        if (event.key === "Escape") {
+            closeLightbox();
+        }
+
+    });
+
+
+    /* =========================
+       CONTACT FORM
+    ========================= */
+
+    const contactForm = document.getElementById("contactForm");
+
+    contactForm.addEventListener("submit", event => {
+
+        event.preventDefault();
+
+        const name =
+            document.getElementById("name").value.trim();
+
+        const phone =
+            document.getElementById("phone").value.trim();
+
+        const message =
+            document.getElementById("message").value.trim();
+
+        const text =
+            `Здравствуйте! Меня зовут ${name}.\n\n` +
+            `Мой номер: ${phone}\n\n` +
+            `Хочу заказать:\n${message}`;
+
+        const whatsappURL =
+            `https://wa.me/77776956210?text=${encodeURIComponent(text)}`;
+
+        window.open(whatsappURL, "_blank");
+
+    });
+
+
+    /* =========================
+       CURRENT YEAR
+    ========================= */
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
